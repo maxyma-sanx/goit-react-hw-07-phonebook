@@ -1,7 +1,5 @@
 import { AiOutlineUserAdd } from 'react-icons/ai';
-import { addContact } from 'redux/contactsSlice';
 import { useDispatch, useSelector } from 'react-redux';
-
 import {
   Form,
   LabelContainer,
@@ -10,8 +8,8 @@ import {
   Input,
   Button,
 } from './ContactForm.styled';
-import { nanoid } from 'nanoid';
 import { getContacts } from 'redux/selectors';
+import { addContact } from 'redux/operations';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -22,8 +20,7 @@ export const ContactForm = () => {
 
     const contact = {
       name: e.currentTarget.elements.name.value,
-      number: e.currentTarget.elements.number.value,
-      id: nanoid(),
+      phone: e.currentTarget.elements.number.value,
     };
 
     const currentName = contacts.find(

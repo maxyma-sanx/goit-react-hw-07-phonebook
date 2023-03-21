@@ -75,3 +75,8 @@ export const ContactsFlexCeil = styled.td`
     border-right: 1px solid ${({ theme }) => theme.colors.darkgrey};
   }
 `;
+
+export const Loading = styled.p`
+  padding: 20px;
+  text-align: center;
+`;
